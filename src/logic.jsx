@@ -3,6 +3,7 @@ const colors = [];
 const userColors = [];
 let tries = 0;
 let isPlaying = true;
+let isWon = false;
 
 function getColors() {
   const set = "RGBYPO"
@@ -21,12 +22,12 @@ function setUserColors(clr) {
       gridPos.className += " " + clr;
     }
     console.log(userColors);                                           // to comment
-    if ((userColors.length === 4) & (tries < 10)) {
+    if ((userColors.length === 4) && (tries < 10)) {
       compare();
       tries++;
 
     }
-    if (tries >= 10) {
+    if ((tries >= 10) && (!isWon) ) {
       console.log("Game Over");                                       // to comment
       isPlaying = false;
       const status =  document.getElementById("status");
@@ -67,6 +68,7 @@ function compare() {
         isPlaying = false;
         const status =  document.getElementById("status");
         status.innerText = " You Won";
+        isWon = true;
         for (let i = 0; i < 4; i++) {
           document.getElementById(i).className += " " + colors[i];
         }
@@ -75,7 +77,7 @@ function compare() {
       for (let k = 0, j = 0; k < 4 ; k++) {
         if (userColors[i] === colors[k]) {
           if (!(pos.includes(k))) {
-            if ((!(ipos.includes(k)) & (j <= rpt))) {
+            if ((!(ipos.includes(k)) && (j <= rpt))) {
               incorrectPossition++;
               j++;
               ipos.push(k);
