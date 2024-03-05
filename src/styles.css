@@ -1,0 +1,74 @@
+button {
+    width: 40px;
+    height: 40px;
+}
+
+.color-btn {
+    margin: 0 15px 10px 0;
+}
+
+.color-div {
+    margin-top: 15px;
+}
+
+.new-game {
+    width: 90px;
+    height: 40px;
+}
+
+.R {
+    background-color: red;
+}
+
+.G {
+    background-color: green;
+}
+
+.B {
+    background-color: blue;
+}
+
+.Y {
+    background-color: yellow;
+}
+
+.P {
+    background-color: purple;
+}
+
+.O {
+    background-color: orange;
+}
+
+div .container {
+    width: 400px;
+    display: inline-block;
+}
+
+div .color-box {
+    height: 40px;
+    width: 40px;
+    border: 1px solid #000;
+    margin: 0 30px 15px 0;
+    display: inline-block;
+}
+
+.correct-order {
+    margin-top: 40px;
+}
+
+.horiztl {
+    display: inline-block;
+}
+
+.box {
+    margin-left: 32%;
+    margin-top: 50px;
+}
+
+.score-box {
+    display: inline-block;
+    position: absolute;
+    margin-top: 10px;
+}
+
