@@ -1,9 +1,19 @@
+import { Button } from '@chakra-ui/react'
 
 const colors = [];
 const userColors = [];
 let tries = 0;
 let isPlaying = true;
 let isWon = false;
+
+const answer = () => {
+  const elements = [];
+  for (let i = 0; i < 4; i++) {
+    elements.push(<div key={i} id={i} className="color-box"></div>);
+  }
+  return elements;
+}
+
 
 function getColors() {
   const set = "RGBYPO"
@@ -105,16 +115,26 @@ console.log("select 4 colors from  R G B Y P O ");                // to comment
 function Buttons() {
 
   return (
+    <>
     <div className="color-div">
-    <button className="R color-btn" onClick={ () => setUserColors("R") } />
-    <button className="G color-btn" onClick={ () => setUserColors("G") } />
-    <button className="B color-btn" onClick={ () => setUserColors("B") } />
+    <p className="slt-btns-info">Select Colors :</p>
+    <center>
+    <Button colorScheme='red' className="R color-btn select-button" onClick={ () => setUserColors("R") } />
+    <Button colorScheme='green' className="G color-btn select-button" onClick={ () => setUserColors("G") } />
+    <Button colorScheme='blue' className="B color-btn select-button" onClick={ () => setUserColors("B") } />
+    <br /> 
+    <Button colorScheme='yellow' className="Y color-btn select-button" onClick={ () => setUserColors("Y") } />
+    <Button colorScheme='purple' className="P color-btn select-button" onClick={ () => setUserColors("P") } />
+    <Button colorScheme='orange' className="O color-btn select-button" onClick={ () => setUserColors("O") } />
     <br />
-    <button className="Y color-btn" onClick={ () => setUserColors("Y") } />
-    <button className="P color-btn" onClick={ () => setUserColors("P") } />
-    <button className="O color-btn" onClick={ () => setUserColors("O") } />
-    <br />
+    </center>
     </div>
+    <h4 className="correct-order">Correct Order : </h4>
+    <br />
+    <div className="ans-div">
+    { answer() }
+    </div>
+    </>
   )
 }
   

@@ -13,13 +13,7 @@ const grid = () => {
   return elements;
 }
 
-const answer = () => {
-  const elements = [];
-  for (let i = 0; i < 4; i++) {
-    elements.push(<div key={i} id={i} className="color-box"></div>);
-  }
-  return elements;
-}
+
   
 function Grid() {
 
@@ -27,8 +21,6 @@ function Grid() {
     <>
     <div className='container'>
       { grid() }
-      <h4 className="correct-order">Correct Order : </h4>
-      { answer() }
     </div>
     </>
   )
