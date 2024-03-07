@@ -35,13 +35,13 @@ function setUserColors(clr) {
     if ((userColors.length === 4) && (tries < 10)) {
       compare();
       tries++;
-
+      document.getElementById("tries").innerText = tries;
     }
     if ((tries >= 10) && (!isWon) ) {
       console.log("Game Over");                                       // to comment
       isPlaying = false;
       const status =  document.getElementById("status");
-      status.innerText = " Game Over";
+      status.innerText = " You Lose";
       for (let i = 0; i < 4; i++) {
         document.getElementById(i).className += " " + colors[i];
       }
@@ -70,6 +70,7 @@ function compare() {
     if (userColors[i] === colors[i]) {
       pos.push(i);
       correctPossition++;
+      console.log(userColors[i]);                            //to comment
       if (ipos.includes(i)) {
         ipos.splice(ipos.indexOf(i),1);
         incorrectPossition--;
@@ -87,12 +88,14 @@ function compare() {
       for (let k = 0, j = 0; k < 4 ; k++) {
         if (userColors[i] === colors[k]) {
           if (!(pos.includes(k))) {
-            if ((!(ipos.includes(k)) && (j <= rpt))) {
-              incorrectPossition++;
-              j++;
-              ipos.push(k);
-              continue;
-            }
+            if (!(ipos.includes(k))) {
+              if (j < rpt) {
+                incorrectPossition++;
+                j++;
+                ipos.push(k);
+                console.log(userColors[i], incorrectPossition, j, rpt);   //to comment
+                continue;
+            }}
           }
       }
     }

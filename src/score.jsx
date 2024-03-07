@@ -14,6 +14,9 @@ function Scoreboard() {
             <p className="horiztl">Status : </p>
             <p className="horiztl" id="status">----</p>
             <br />
+            <p className="horiztl">Tries &nbsp;&nbsp;: </p>
+            <p className="horiztl" id="tries"> 0</p>
+            <br />
             <p className="horiztl">Correct Possition &nbsp;&nbsp;:</p>
             <p className="horiztl" id="cpos"></p>
             <br />

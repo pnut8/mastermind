@@ -9,7 +9,7 @@ function App() {
       <Center>
       <div className='box'>
       <Center>
-      <p>Mastermind</p>
+      <p className='title'>Mastermind</p>
       </Center>
       <Grid />
       <div className='score-box'>
