@@ -20,7 +20,7 @@ function getColors() {
   for (let i = 0; i < 4; i++) {
     colors[i] = set.charAt(Math.floor(Math.random() * 6));
   }
-  console.log(colors);                                                  // to comment
+  // console.log(colors);                                                  // to comment
 }
 
 function setUserColors(clr) {
@@ -31,14 +31,14 @@ function setUserColors(clr) {
       const gridPos = document.getElementById(String(tries) + (userColors.length - 1));
       gridPos.className += " " + clr;
     }
-    console.log(userColors);                                           // to comment
+    // console.log(userColors);                                           // to comment
     if ((userColors.length === 4) && (tries < 10)) {
       compare();
       tries++;
       document.getElementById("tries").innerText = tries;
     }
     if ((tries >= 10) && (!isWon) ) {
-      console.log("Game Over");                                       // to comment
+      // console.log("Game Over");                                       // to comment
       isPlaying = false;
       const status =  document.getElementById("status");
       status.innerText = " You Lose";
@@ -70,7 +70,7 @@ function compare() {
     if (userColors[i] === colors[i]) {
       pos.push(i);
       correctPossition++;
-      console.log(userColors[i]);                            //to comment
+      // console.log(userColors[i]);                            //to comment
       if (ipos.includes(i)) {
         ipos.splice(ipos.indexOf(i),1);
         incorrectPossition--;
@@ -93,7 +93,7 @@ function compare() {
                 incorrectPossition++;
                 j++;
                 ipos.push(k);
-                console.log(userColors[i], incorrectPossition, j, rpt);   //to comment
+                // console.log(userColors[i], incorrectPossition, j, rpt);   //to comment
                 continue;
             }}
           }
@@ -103,8 +103,8 @@ function compare() {
 }
 userColors.splice(0, 4);
 
-console.log(correctPossition);                                      // to comment
-console.log(incorrectPossition);                                    // to comment
+// console.log(correctPossition);                                      // to comment
+// console.log(incorrectPossition);                                    // to comment
 
 const cposElement =  document.getElementById("cpos");
 const inposElement =  document.getElementById("inpos");
@@ -113,7 +113,7 @@ inposElement.innerText = incorrectPossition;
 
 }
 
-console.log("select 4 colors from  R G B Y P O ");                // to comment
+// console.log("select 4 colors from  R G B Y P O ");                // to comment
 
 function Buttons() {
 

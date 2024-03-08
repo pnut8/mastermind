@@ -22,3 +22,6 @@ ReactDOM.createRoot(document.getElementById('root')).render(
   </ChakraProvider>
   </React.StrictMode>,
 )
+
+
+// bg: "#68974c"

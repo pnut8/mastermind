@@ -11,8 +11,10 @@ function Scoreboard() {
             <Button colorScheme='green' className="new-game" onClick={reload}>New Game</Button>
             </center>
             <br />
+            <div className='game-state'>
             <p className="horiztl">Status : </p>
             <p className="horiztl" id="status">----</p>
+            </div>
             <br />
             <p className="horiztl">Tries &nbsp;&nbsp;: </p>
             <p className="horiztl" id="tries"> 0</p>
